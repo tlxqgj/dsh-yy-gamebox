@@ -1,0 +1,4 @@
+- insert:
+    - id: yy-gamebox
+      name: '@local/yy-gamebox'
+      config: {}

@@ -1,0 +1,62 @@
+{
+  "name": "dsh-yy-gamebox",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Run local games natively inside the DeepSeek Harness panel: owned-window embedding with viewport sizing, no extra taskbar window, one UAC prompt for admin games.",
+  "author": "莫若知秋",
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "game",
+    "gamebox",
+    "steam"
+  ],
+  "homepage": "https://github.com/OWNER/dsh-yy-gamebox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/dsh-yy-gamebox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OWNER/dsh-yy-gamebox/issues"
+  },
+  "os": [
+    "win32"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib",
+    "native",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
