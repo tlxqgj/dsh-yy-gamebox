@@ -1,4 +1,6 @@
-# yy 收纳箱（@local/yy-gamebox）
+# yy 收纳箱（dsh-yy-gamebox）
+
+作者：**莫若知秋** · 仅 Windows（依赖 Win32 窗口 API 与 .NET Framework 的 `csc.exe`）
 
 把本机游戏收进 DeepSeek Harness 的面板里运行：原生窗口渲染（不是串流），延迟等于直接玩；窗口被 Harness 主窗口「拥有」，不占任务栏、不进 Alt+Tab，看起来就长在页面上。
 
@@ -36,13 +38,21 @@ Electron 的 `Chrome_WidgetWin_1` 只往子窗口 `Intermediate D3D Window` 上�
 
 ## 安装
 
-插件包自带 `cordis.patch.yml`，用插件管理器启用即可：
+从仓库安装（推荐）：
+
+```sh
+dsh plugin add https://github.com/tlxqgj/dsh-yy-gamebox
+```
+
+本地开发时也可以直接把目录加进 profile：插件包自带 `cordis.patch.yml`，用插件管理器启用即可：
 
 ```
 plugin_manager install_bundle target=<本目录绝对路径>
 ```
 
 或在 profile 的 `package.json` 里 `"@local/yy-gamebox": "link:<本目录>"` 后重启。
+
+首次运行引擎时，插件会用系统自带的 `csc.exe` 把 `native/yybox.cs` 编译成 `<DSH_HOME>/yy-gamebox/bin/yybox.exe`，不需要 Node 依赖、不需要预编译产物。
 
 ## 使用
 
