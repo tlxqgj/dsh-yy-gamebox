@@ -14,13 +14,13 @@
     "gamebox",
     "steam"
   ],
-  "homepage": "https://github.com/OWNER/dsh-yy-gamebox#readme",
+  "homepage": "https://github.com/tlxqgj/dsh-yy-gamebox#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/dsh-yy-gamebox.git"
+    "url": "git+https://github.com/tlxqgj/dsh-yy-gamebox.git"
   },
   "bugs": {
-    "url": "https://github.com/OWNER/dsh-yy-gamebox/issues"
+    "url": "https://github.com/tlxqgj/dsh-yy-gamebox/issues"
   },
   "os": [
     "win32"
